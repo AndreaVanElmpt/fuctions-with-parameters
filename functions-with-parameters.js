@@ -17,6 +17,15 @@ console.log(result);
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
 
+function greeter(name) {
+  return "Hoi " + name
+}
+
+const name = greeter("Kees!")
+
+console.log(name)
+
+
 
 
 /* Opdracht 2 */
@@ -26,7 +35,13 @@ console.log(result);
 // minutesToSeconds(3) geeft 180
 // minutesToSeconds(23) geeft 1380
 
+function minutesToSeconds(minutes) {
+  return minutes * 60
+}
 
+const numberOfSeconds = minutesToSeconds(23);
+
+console.log(numberOfSeconds);
 
 /* Opdracht 3 */
 // Schrijf een functie genaamd merge, die twee strings verwacht en deze aan elkaar geplakt teruggeeft.
@@ -35,7 +50,13 @@ console.log(result);
 // merge("abra", "cadabra") geeft "abracadabra"
 // merge("zoet", "sappig") geeft "zoetsappig"
 
+function merge(firstString, secondString){
+  return firststring + secondstring
+}
 
+const mergeWord = "abra" + "cadabra";
+
+console.log(mergeWord);
 
 
 /* Opdracht  4 */
@@ -43,6 +64,15 @@ console.log(result);
 // ---- Verwachte uitkomsten:
 // calculateDogYears(6) geeft "Jouw hond is 42 jaar oud in mensenjaren."
 // calculateDogYears(2) geeft "Jouw hond is 14 jaar oud in mensenjaren."
+
+function calculateDogYears(dogAge) {
+  const humanAge = dogAge * 7;
+  return "Jouw hond is " + humanAge + " jaar oud in mensenjaren."
+}
+
+const mydog =  calculateDogYears(6)
+
+console.log(mydog)
 
 
 
@@ -54,6 +84,12 @@ console.log(result);
 // wrapper("beep", "_") geeft "_beep_"
 // wrapper("kaas", "Q") geeft "QkaasQ"
 
+function wrapper(word, character){
+ return character + word + character;
+}
+
+const outcome = wrapper("Bril", "*")
+ console.log(outcome)
 
 
 /* Bonus opdracht  */
@@ -63,3 +99,11 @@ console.log(result);
 // createDetailString({ firstName: 'Kees', lastName: 'Klaasen', profession: 'brandweerman'}) geeft "Het beroep vam Kees Klaasen is brandweerman."
 
 
+function createDetailString(detailtsObject) {
+  return "Het beroep van " + detailtsObject.firstName + " " + detailtsObject.lastName + " is " + detailtsObject.profession;
+}
+
+const detailString = createDetailString({firstName: 'jan', lastName: 'Jansen', profession: "docent"});
+
+
+console.log(detailString)
